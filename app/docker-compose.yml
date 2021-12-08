@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app-vue:
+    build:
+      context: ./vue-frms
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: app-vue-frms
+    volumes:
+      - ./vue-frms:/usr/src/app/vue-frms
+      - /usr/src/app/vue-frms/node_modules
+    
+    
